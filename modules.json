@@ -1,0 +1,56 @@
+[
+    {
+        "name": "nqrduck-spectrometer",
+        "description": "Base module for all of the different spectrometer implementations",
+        "source": "nqrduck-spectrometer"
+    },
+    {
+        "name": "nqrduck-spectrometer-limenqr",
+        "description": "A module for control of a LimeSDR based spectrometer",
+        "platforms": [
+            "linux"
+        ],
+        "source": "nqrduck-spectrometer-limenqr",
+        "dependencies": [
+            "nqrduck-spectrometer"
+        ]
+    },
+    {
+        "name": "nqrduck-spectrometer-simulator",
+        "description": "A module for simulating magnetic resonance experiments",
+        "source": "nqrduck-spectrometer-simulator",
+        "dependencies": [
+            "nqrduck-spectrometer"
+        ]
+    },
+    {
+        "name": "nqrduck-pulseprogrammer",
+        "description": "A module for graphical pulse sequence programming",
+        "source": "nqrduck-pulseprogrammer",
+        "dependencies": [
+            "nqrduck-spectrometer"
+        ]
+    },
+    {
+        "name": "nqrduck-measurement",
+        "description": "A module for performing spectroscopy measurements",
+        "source": "nqrduck-measurement",
+        "dependencies": [
+            "nqrduck-spectrometer",
+            "nqrduck-pulseprogrammer"
+        ]
+    },
+    {
+        "name": "nqrduck-autotm",
+        "description": "A module for automatic tuning and matching of the probe coils",
+        "source": "nqrduck-autotm"
+    },
+    {
+        "name": "nqrduck-broadband",
+        "description": "A module for broadband magnetic resonance measurements",
+        "source": "nqrduck-broadband",
+        "dependencies": [
+            "nqrduck-spectrometer"
+        ]
+    }
+]
